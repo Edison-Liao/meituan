@@ -5,24 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>美团</title>
 </head>
 
 <body>
     <div id="app">
-        <div class="img">
-            <!--     <img v-bind:src="resp.data"> -->
+        <ul class="clearfix nav">
+            <li>
+                <a href="javascript:;">综合排序&gt;</a>
+            </li>
+            <li>
+                <a href="javascript:;">销量最高</a>
+            </li>
+            <li>
+                <a href="javascript:;">距离最近</a>
+            </li>
+            <li>
+                <a href="javascript:;">筛选
+                    <i class="funnel"></i>
+                </a>
+            </li>
+        </ul>
+        <div  class="sellerInfo">
+            <div class="clearfix " v-for="seller in sellerInfo">
+                <div class="fl images">
+                    <img :src="seller.image">
+                </div>
+                <div class="name">
+                    <b>{{seller.name}}</b>
+                    <span v-show="seller.pickup">支持自取</span>
+                </div>
+                <div class="star">
+                    <img src="./images/QQ图片20180629203507.png">
+                    <span>月售{{seller.star}}</span>
+                </div>
+                <div class="timeUsed">
+                    <span>{{seller.timeUsed}}分钟</span>
+                    <span>{{seller.distance}}km</span>
+                </div>
+                <div class="startFee">
+                    <span>起送￥{{seller.startFee}}</span>
+                    <span>配送￥{{seller.transportFee}}</span>
+                </div>
+                <div class="activities" v-html="seller.activities"></div>
+            </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
     </div>
 </body>
 <script src="./plugin/vue.js"></script>

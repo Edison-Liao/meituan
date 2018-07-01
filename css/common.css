@@ -1,0 +1,46 @@
+@charset "utf-8";
+/*****
+******功能：公共样式表
+******开发者：***
+******日前：
+******
+***/
+/*标签样式初始化*/
+
+body,p,ul,h1,h2,h3,h4,h5,h6,ol,li,dl,dt,dd{
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+header,footer,section,article,nav,aside{
+	display: block;
+}
+a{
+	color:#000000;
+	text-decoration:none;
+}
+html,body{
+	font:16px "Microsoft Yahei","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+input,button{
+	outline: none;
+}
+/*浮动公用样式*/
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+/*1.清除浮动*/
+.clearfix:before,.clearfix:after{
+	content: "";
+	display: table;
+}
+.clearfix:after{
+	height: 0;
+	visibility: hidden;
+	clear:both;
+}
+
+
