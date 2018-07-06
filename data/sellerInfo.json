@@ -1,5 +1,4 @@
-[
-    {
+[{
         "image": "https://www.aulence.com/data/seller-iamge/log-001.jpg",
         "name": "姐妹荷叶饭",
         "star": 4912,
@@ -10,7 +9,7 @@
         "startFee": 18,
         "transportFee": 1,
         "giveMeMoney": 500,
-        "activities": "<p><span class=\"red\">减</span>满20减8;满50减25;满80减45;满100减55</p><p><span class=\"purple\">减</span>新用户立减15元;首次使用银行卡支付半价</p>"
+        "activities": "<p><span class=\"red\">减</span>&nbsp;满20减8;满50减25;满80减45;满100减55</p><p><span class=\"purple\">减</span>&nbsp;新用户立减15元;首次使用银行卡支付半价</p>"
     },
     {
         "image": "https://www.aulence.com/data/seller-iamge/log-002.jpg",

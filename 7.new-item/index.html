@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vus.js</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <!-- 视图(view) -->
+    <div id="app">
+        <form>
+            <div>
+                <label>姓名:</label>
+                <input type="text" v-model="userInfo.name">
+            </div>
+            <div>
+                <label>年龄:</label>
+                <input type="text" v-model="userInfo.age">
+            </div>
+            <div>
+                <label>性别:</label>
+                <label>
+                    男
+                    <input type="radio" 
+                    v-model="userInfo.gender" 
+                    value="男" 
+                    name="gender">
+                </label>
+                <label>
+                    女
+                    <input type="radio" 
+                    v-model="userInfo.gender" 
+                    value="女" 
+                    name="gender">
+                </label>
+            </div>
+            <div>
+                <label>爱好:</label>
+                <label class="checkItem">
+                    格斗
+                    <input type="checkbox" 
+                    v-model="userInfo.hobby" 
+                    value="格斗" 
+                    name="hobby">
+                </label>
+                <label class="checkItem">
+                    下棋
+                    <input type="checkbox" 
+                    v-model="userInfo.hobby" 
+                    value="下棋" 
+                    name="hobby">
+                </label>
+                <label class="checkItem">
+                    游泳
+                    <input type="checkbox" 
+                    v-model="userInfo.hobby" 
+                    value="游泳" 
+                    name="hobby">
+                    </label>
+                <label class="checkItem">
+                    跳舞
+                    <input type="checkbox" 
+                    v-model="userInfo.hobby" 
+                    value="跳舞" 
+                    name="hobby">
+                    </label>
+            </div>
+            <div>
+                <button type="button" @click="affirmAdd">确认添加</button>
+            </div>
+        </form>
+        <div class="table-container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th v-for="cell in roleThead">{{ cell }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="tr in roleList">
+                        <td v-for="cell in tr">{{ cell | arrToStr}}</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+<script src="./plugin/vue.js"></script>
+<script src="./js/index.js"></script>
+
+</html>

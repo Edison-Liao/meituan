@@ -14,7 +14,7 @@
     <div id="app">
         <ul class="clearfix nav">
             <li>
-                <a href="javascript:;">综合排序&gt;</a>
+                <a href="javascript:;">综合排序&nbsp;&gt;</a>
             </li>
             <li>
                 <a href="javascript:;">销量最高</a>
@@ -28,26 +28,31 @@
                 </a>
             </li>
         </ul>
-        <div  class="sellerInfo">
-            <div class="clearfix " v-for="seller in sellerInfo">
-                <div class="fl images">
-                    <img :src="seller.image">
-                </div>
-                <div class="name">
-                    <b>{{seller.name}}</b>
-                    <span v-show="seller.pickup">支持自取</span>
-                </div>
-                <div class="star">
-                    <img src="./images/QQ图片20180629203507.png">
-                    <span>月售{{seller.star}}</span>
-                </div>
-                <div class="timeUsed">
-                    <span>{{seller.timeUsed}}分钟</span>
-                    <span>{{seller.distance}}km</span>
-                </div>
-                <div class="startFee">
-                    <span>起送￥{{seller.startFee}}</span>
-                    <span>配送￥{{seller.transportFee}}</span>
+        <div class="sellerInfo">
+            <div class="clearfix list" v-for="seller in sellerInfo">
+                <div class="list-top">
+                    <div class="fl images">
+                        <img :src="seller.image">
+                    </div>
+                    <div class="text-box">
+                        <div class="name">
+                            <b>{{seller.name}}</b>
+                            <span v-show="seller.pickup" class="pickup">支持自取</span>
+                        </div>
+                        <div class="star">
+                            <img src="./images/QQ图片20180629203507.png">
+                            <span>月售{{seller.star}}</span>
+                            <span>{{seller.timeUsed}}分钟</span>
+                            <span>{{seller.distance}}km</span>
+                        </div>
+                        <div class="timeUsed">
+
+                        </div>
+                        <div class="startFee">
+                            <span>起送￥{{seller.startFee}}</span>
+                            <span>配送￥{{seller.transportFee}}</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="activities" v-html="seller.activities"></div>
             </div>
