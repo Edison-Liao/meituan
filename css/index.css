@@ -139,3 +139,85 @@ body {
     height: 18px;
     vertical-align: middle;
 }
+
+.btn {
+    text-align: center;
+}
+
+.addBtn {
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    margin: 5% 0;
+    color: #ffffff;
+    background-color: #ff8910;
+    border-radius: 5px;
+    border: none;
+}
+
+.businessInfo {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+
+.businessInfo>p {
+    text-align: center;
+    background-color: #dbeeff;
+    padding: 2% 5%;
+    margin: 5%;
+}
+
+.show {
+    display: none;
+}
+
+.inputBox {
+    border-bottom: 1px solid #999;
+    padding:2.8% 3%;
+    margin:.5% 4% ;
+}
+
+input {
+   font-size: 16px;
+    background-color: #fff;
+    border: none;
+}
+.inputBox>input{
+    width: 60%;
+}
+
+.inputTitle {
+    padding-right: 5%;
+    display: inline-block;
+    width: 25%;
+    
+}
+.inputBox>textarea{
+    display: inline-block;
+    line-height: 100%;
+    width: 100%;
+    height: 40px;
+    border:none;
+    background-color: #fff;
+    resize:none;
+}
+.confirmBtn{
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    margin: 3% 0;
+    color: #ffffff;
+    background-color: #2396fd;
+    border-radius: 5px;
+    border: 1px solid #333333;
+}
+.cancelBtn{
+    width: 90%;
+    height: auto;
+    padding: 10px;
+    color: #000000;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 1px solid #333333;
+}
