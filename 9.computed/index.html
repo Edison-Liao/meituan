@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.js计算属性</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div id="app">
+        <div>共有{{count}}件商品</div>
+        <!-- 排序 -->
+        <div class="goods-sort">
+            <button type="button" @click="reorder('asce')">价格↑</button>
+            <button type="button" @click="reorder('desc')">价格↓</button>
+        </div>
+        <!-- 商品信息 -->
+        <ul class="goods-list">
+            <li v-for="(goods,index) in goodsInfo">
+                <label>商品名称：</label>
+                <span :title="goods.name">{{ goods.name }}</span>
+                <label>商品价格：</label>
+                <span>{{ goods.price | currency }}</span>
+
+                <i @click="showDetails(goods)">
+                    <img src="img/icon-detail.svg">
+                </i>
+                <i @click="deleteGoods(index)">
+                    <img src="img/icon-delete.svg">
+                </i>
+            </li>
+        </ul>
+
+        <!-- 商品详情面板 -->
+        <div v-if="goodsDetail_state">
+            <!-- 商品详情面板——遮罩层 -->
+            <aside class="masklayer"></aside>
+            <!-- 商品详情面板——详情信息 -->
+            <div class="goods-detail">
+                <!-- 商品详情面板——关闭按钮 -->
+                <i class="close-panel" @click="closeDetails">&times;</i>
+                <div>
+                    <label>商品编号</label>
+                    <span>{{ goodsDetail.identifier }}</span>
+                </div>
+                <div>
+                    <label>商品名称</label>
+                    <span>{{ goodsDetail.name }}</span>
+                </div>
+                <div>
+                    <label>制造国</label>
+                    <span>{{ goodsDetail.country }}</span>
+                </div>
+                <div>
+                    <label>生产日期</label>
+                    <span>{{ goodsDetail.manufDate | toDate }}</span>
+                </div>
+                <div>
+                    <label>商品价格</label>
+                    <span>{{ goodsDetail.price | currency }}</span>
+                </div>
+
+            </div>
+        </div>
+        <p>总价:{{total|currency}}</p>
+    </div>
+
+    <script src="plugin/vue.js"></script>
+    <script src="plugin/axios.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

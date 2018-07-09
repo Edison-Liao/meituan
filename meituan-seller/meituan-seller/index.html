@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>美团商家</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div id="app">
+        <ul class="seller-list">
+            <!-- 商家信息 -->
+            <li v-for="seller in sellerList">
+                <!-- 商家信息——图片 -->
+                <div class="seller-image">
+                    <img :src="seller.image">
+                </div>
+                <!-- 商家信息——具体信息 -->
+                <div class="seller-info">
+                    <div>{{ seller.name }}</div>
+                    <div>
+                        月售：{{ seller.salesCount }}
+                        {{ seller.timeUsed }}分钟 | {{ seller.distance }}km
+                    </div>
+                    <div>
+                        {{ seller.startFee }} | {{ seller.transportFee }}
+                    </div>
+                    <div v-html="seller.activities"></div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script src="plugin/vue.js"></script>
+    <script src="plugin/axios.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

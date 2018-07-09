@@ -58,10 +58,12 @@
                     <div class="activities" v-html="seller.activities"></div>
                 </div>
             </div>
+
             <div class="btn">
                 <button type="button" class="addBtn" @click="addBusiness">添加商家</button>
             </div>
         </div>
+        <!-- 添加商家面板 -->
         <div class="businessInfo show">
             <p>商户信息创建</p>
             <form>
@@ -77,32 +79,32 @@
                     <label class="inputTitle">是否自取</label>
                     <label>
                         是
-                        <input type="radio" v-model="businessInfo.pickup" value="true" name="pickup">
+                        <input type="radio" v-model="businessInfo.pickup" :value="true" name="pickup">
                     </label>
                     <label>
                         否
-                        <input type="radio" v-model="businessInfo.pickup" value="false" name="pickup">
+                        <input type="radio" v-model="businessInfo.pickup" :value="false" name="pickup">
                     </label>
                 </div>
                 <div class="inputBox">
                     <label class="inputTitle">月销量</label>
-                    <input type="text" value="0" v-model="businessInfo.salesCount">
+                    <input type="number" value="0" v-model="businessInfo.salesCount">
                 </div>
                 <div class="inputBox">
                     <label class="inputTitle">运送时间</label>
-                    <input type="text" value="0" v-model="businessInfo.timeUsed">
+                    <input type="number" value="0" v-model="businessInfo.timeUsed">
                 </div>
                 <div class="inputBox">
                     <label class="inputTitle">距离</label>
-                    <input type="text" value="0" v-model="businessInfo.distance">
+                    <input type="number" value="0" v-model="businessInfo.distance">
                 </div>
                 <div class="inputBox">
                     <label class="inputTitle">起送费</label>
-                    <input type="text" value="0" v-model="businessInfo.startFee">
+                    <input type="number" value="0" v-model="businessInfo.startFee">
                 </div>
                 <div class="inputBox">
                     <label class="inputTitle">配送费</label>
-                    <input type="text" value="0" v-model="businessInfo.transportFee">
+                    <input type="number" value="0" v-model="businessInfo.transportFee">
                 </div>
                 <div class="inputBox">
                     <textarea v-model="businessInfo.activities"></textarea>

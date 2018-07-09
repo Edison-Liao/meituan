@@ -155,10 +155,31 @@ body {
     border: none;
 }
 
+
+/* 商家信息面板 */
+
 .businessInfo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background-color: #ffffff;
-    width: 100%;
+    z-index: 9;
+}
+
+.businessInfo form>div {
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.businessInfo input[type="text"],
+.businessInfo input[type="number"] {
     height: 100%;
+    border: none;
+    background-color: transparent;
+    font: inherit;
 }
 
 .businessInfo>p {
@@ -174,16 +195,17 @@ body {
 
 .inputBox {
     border-bottom: 1px solid #999;
-    padding:2.8% 3%;
-    margin:.5% 4% ;
+    padding: 2.8% 3%;
+    margin: .5% 4%;
 }
 
 input {
-   font-size: 16px;
+    font-size: 16px;
     background-color: #fff;
     border: none;
 }
-.inputBox>input{
+
+.inputBox>input {
     width: 60%;
 }
 
@@ -191,18 +213,19 @@ input {
     padding-right: 5%;
     display: inline-block;
     width: 25%;
-    
 }
-.inputBox>textarea{
+
+.inputBox>textarea {
     display: inline-block;
     line-height: 100%;
     width: 100%;
     height: 40px;
-    border:none;
+    border: none;
     background-color: #fff;
-    resize:none;
+    resize: none;
 }
-.confirmBtn{
+
+.confirmBtn {
     width: 90%;
     height: auto;
     padding: 10px;
@@ -212,7 +235,8 @@ input {
     border-radius: 5px;
     border: 1px solid #333333;
 }
-.cancelBtn{
+
+.cancelBtn {
     width: 90%;
     height: auto;
     padding: 10px;

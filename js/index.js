@@ -3,17 +3,18 @@ new Vue({
     //数据源(Model,数据模型)
     data: {
         sellerInfo: [],
+        //商家信息
         businessInfo: {
             "image": "",
             "name": "",
-            "star": '',
-            "pickup": "",
-            "salesCount": "",
-            "timeUsed": "",
-            "distance": "",
-            "startFee": "",
-            "transportFee": "",
-            "giveMeMoney": "",
+            "star": 0,
+            "pickup": false,
+            "salesCount": 0,
+            "timeUsed": 0,
+            "distance": 0,
+            "startFee": 0,
+            "transportFee": 0,
+            "giveMeMoney": 0,
             "activities": ""
         },
         show: true
@@ -43,7 +44,6 @@ new Vue({
         },
         confirmAddBusiness() {
             this.sellerInfo.push(this.businessInfo);
-            this.businessInfo.pickup = eval(this.businessInfo.pickup.toLowerCase());
             this.businessInfo = {
                 "image": "",
                 "name": "",
